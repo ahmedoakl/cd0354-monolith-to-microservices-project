@@ -19,7 +19,7 @@ script:
   - docker tag udagram-api-feed ahmakl/udagram-api-feed:v1 #tag docker images
   - docker tag udagram-api-user ahmakl/udagram-api-user:v1
   - docker tag reverseproxy ahmakl/reverseproxy:v1
-  - docker tag udagram-frontend ahmakl/udagram-frontend:local
+  - docker tag udagram-frontend:local ahmakl/udagram-frontend:local
 
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
